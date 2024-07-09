@@ -1,10 +1,12 @@
-package com.example.turismoapp
+package com.example.turismoapp.activity
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.TextView
 import android.widget.Button
+import com.example.turismoapp.Destination
+import com.example.turismoapp.R
 
 class SelectionActivity : AppCompatActivity() {
 

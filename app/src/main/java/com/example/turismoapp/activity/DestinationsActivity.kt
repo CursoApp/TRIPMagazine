@@ -1,10 +1,13 @@
-package com.example.turismoapp
+package com.example.turismoapp.activity
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.turismoapp.DBHandler
+import com.example.turismoapp.DestinationAdapter
+import com.example.turismoapp.R
 
 class DestinationsActivity : AppCompatActivity() {
 

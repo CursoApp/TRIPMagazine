@@ -1,10 +1,11 @@
-package com.example.turismoapp
+package com.example.turismoapp.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 import android.content.Intent
 import android.widget.Button
+import com.example.turismoapp.R
 
 class MainActivity : AppCompatActivity() {
 

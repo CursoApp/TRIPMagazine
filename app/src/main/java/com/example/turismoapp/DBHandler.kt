@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper
 class DBHandler(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
     companion object {
-        private const val DATABASE_VERSION = 3
+        private const val DATABASE_VERSION = 7
         private const val DATABASE_NAME = "DestinationsDB"
         private const val TABLE_DESTINATIONS = "Destinations"
         private const val KEY_ID = "id"
@@ -36,7 +36,8 @@ class DBHandler(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, nul
         val destinations = listOf(
             Destination(1, "MADRID DE LOS AUSTRIAS", "Parte I.", "https://www.tripmagazine.eu/TRIP_Magazine/int/trip_int2.html"),
             Destination(2, "LIMA", "La ciudad de los Reyes.", "https://www.tripmagazine.eu/TRIP_Magazine/costa/trip_costa2.html"),
-            Destination(3, "EUROPA", "Tierra de vinos.", "https://www.tripmagazine.eu/TRIP_Magazine/cultural/trip_cul.html")
+            Destination(3, "EUROPA", "Tierra de vinos.", "https://www.tripmagazine.eu/TRIP_Magazine/cultural/trip_cul.html"),
+            Destination(4, "BLOG TRIP Magazine", "Nuestro Blog.", "https://tripmagazine.blogspot.com")
         )
 
         for (destination in destinations) {

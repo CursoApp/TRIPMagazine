@@ -1,9 +1,10 @@
-package com.example.turismoapp
+package com.example.turismoapp.activity
 
 import android.os.Bundle
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
+import com.example.turismoapp.R
 
 class WebContentActivity : AppCompatActivity() {
 
@@ -16,6 +17,6 @@ class WebContentActivity : AppCompatActivity() {
         val webView = findViewById<WebView>(R.id.webView)
         webView.webViewClient = WebViewClient()
         webView.settings.javaScriptEnabled = true
-        webView.loadUrl(url!!)  // poner url trip magazine
+        webView.loadUrl(url!!)  // signos de explamación son para ver url trip magazine
     }
 }
