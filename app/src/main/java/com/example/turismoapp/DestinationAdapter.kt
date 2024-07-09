@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class DestinationAdapter(private val destinations: List<Destination>, private val clickListener: (Destination) -> Unit) :
+class DestinationAdapter(private var destinations: List<Destination>, private val clickListener: (Destination) -> Unit) :
     RecyclerView.Adapter<DestinationAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -25,4 +25,10 @@ class DestinationAdapter(private val destinations: List<Destination>, private va
     }
 
     override fun getItemCount() = destinations.size
+
+    /* Este código de abajo, es para crear una búsqueda  de destinos de una nueva manera */
+    fun updateData(dataSet: List<Destination>) {
+        this.destinations = dataSet
+        notifyDataSetChanged()
+    }
 }

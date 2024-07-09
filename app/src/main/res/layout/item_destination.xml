@@ -5,11 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:padding="16dp">
 
+<!-- esto es para el texto de destinos y entrar en la web -->
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/blue"
+        android:textColor="#FFC107"
         android:textSize="20sp"
         android:textStyle="bold"
         tools:text="Destino"/>

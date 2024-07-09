@@ -7,11 +7,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".activity.DestinationsActivity">
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="100dp"
-        android:background="#EBF10D"/>
+        android:background="#25255C"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/ic_launcher_trip" />
 
 </RelativeLayout>
