@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#F68E04">
 
 <!-- esto es para el texto de destinos y entrar en la web -->
     <TextView

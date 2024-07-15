@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#7D92D5"
+    android:background="#F68E04"
     tools:context=".activity.MainActivity">
 
     <TextView
@@ -29,6 +29,14 @@
         android:text="Destinos TRIP Magazine"
         android:textColor="#975C63"
         android:textSize="25sp" />
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="141dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="500dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/ic_launcher_trip"/>
 
 </RelativeLayout>
 
