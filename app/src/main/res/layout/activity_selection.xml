@@ -4,7 +4,7 @@
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-    android:background="#7D92D5"
+    android:background="@drawable/fdotrip"
 tools:context=".activity.SelectionActivity">
 
     <TextView
@@ -22,16 +22,41 @@ tools:context=".activity.SelectionActivity">
         android:layout_below="@id/textViewName"
         android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"
-        android:textSize="25sp"/>
+        android:textSize="25sp"
+        android:paddingHorizontal="10sp"/>
 
     <Button
         android:id="@+id/btnViewMore"
-        android:layout_width="wrap_content"
+        android:layout_width="250sp"
         android:layout_height="wrap_content"
-        android:text="Destinos TRIP Magazine"
+        android:text="DESTINO 1"
         android:backgroundTint="#DFD36C"
         android:layout_below="@id/textViewDescription"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         android:textSize="20sp"/>
+
+    <!--> Dos botones agregados, copiados del boton 1 -->
+    <Button
+        android:id="@+id/btnViewMore2"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:text="DESTINO 2"
+        android:backgroundTint="#BCB25B"
+        android:layout_below="@id/textViewDescription"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/btnViewMore3"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:text="DESTINO 3"
+        android:backgroundTint="#9E954D"
+        android:layout_below="@id/textViewDescription"
+        android:layout_marginTop="140dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"/>
+
 </RelativeLayout>

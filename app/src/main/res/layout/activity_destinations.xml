@@ -6,25 +6,37 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".activity.DestinationsActivity"
-    android:background="#74A21BC8">
+    android:background="@drawable/fdotrip">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100sp"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="30sp">
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="80dp"
-        android:background="#25255C"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#25255C"/>
 
+    </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="500dp"
+            android:layout_marginBottom="50dp"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="10sp">
 
             <ImageView
-                android:layout_width="140dp"
-                android:layout_height="141dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="500dp"
-                android:layout_marginBottom="50dp"
-                android:background="@drawable/ic_launcher_trip"/>
+                        android:layout_width="140dp"
+                        android:layout_height="141dp"
+                        android:background="@drawable/ic_launcher_trip"/>
 
-
+        </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

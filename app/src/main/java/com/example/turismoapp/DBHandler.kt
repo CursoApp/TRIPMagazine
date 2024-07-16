@@ -8,12 +8,13 @@ import android.database.sqlite.SQLiteOpenHelper
 class DBHandler(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
     companion object {
-        private const val DATABASE_VERSION = 7
+        private const val DATABASE_VERSION = 23
         private const val DATABASE_NAME = "DestinationsDB"
         private const val TABLE_DESTINATIONS = "Destinations"
         private const val KEY_ID = "id"
         private const val KEY_NAME = "name"
         private const val KEY_DESCRIPTION = "description"
+        private const val KEY_TITLES = "titles"
         private const val KEY_URL = "url"
     }
 
@@ -22,6 +23,7 @@ class DBHandler(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, nul
                 + KEY_ID + " INTEGER PRIMARY KEY,"
                 + KEY_NAME + " TEXT,"
                 + KEY_DESCRIPTION + " TEXT,"
+                + KEY_TITLES + " TEXT,"
                 + KEY_URL + " TEXT" + ")")
         db?.execSQL(createTable)
         addInitialDestinations(db)
@@ -34,10 +36,10 @@ class DBHandler(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, nul
 
     private fun addInitialDestinations(db: SQLiteDatabase?) {
         val destinations = listOf(
-            Destination(1, "MADRID DE LOS AUSTRIAS", "Parte I.", "https://www.tripmagazine.eu/TRIP_Magazine/int/trip_int2.html"),
-            Destination(2, "LIMA", "La ciudad de los Reyes.", "https://www.tripmagazine.eu/TRIP_Magazine/costa/trip_costa2.html"),
-            Destination(3, "EUROPA", "Tierra de vinos.", "https://www.tripmagazine.eu/TRIP_Magazine/cultural/trip_cul.html"),
-            Destination(4, "BLOG TRIP Magazine", "Nuestro Blog.", "https://tripmagazine.blogspot.com")
+            Destination(1, "COSTA", "TRIPMagazine COSTAS:", "Antigua & Barbuda - Lima - Fethiye", "https://www.tripmagazine.eu/TRIP_Magazine/costa/trip_costa.html, https://www.tripmagazine.eu/TRIP_Magazine/costa/trip_costa2.html, https://www.tripmagazine.eu/TRIP_Magazine/costa/trip_costa3.html"),
+            Destination(2, "INTERIOR", "TRIPMagazine INTERIOR", "Toledo - Madrid - Poiana", "https://www.tripmagazine.eu/TRIP_Magazine/int/trip_int.html, https://www.tripmagazine.eu/TRIP_Magazine/int/trip_int2.html, https://www.tripmagazine.eu/TRIP_Magazine/int/trip_int3.html"),
+            Destination(3, "CULTURAL", "TRIPMagazine CULTURA", "Europa: Vinos - Francia: Auvergne - España: SPAS","https://www.tripmagazine.eu/TRIP_Magazine/cultural/trip_cul.html, https://www.tripmagazine.eu/TRIP_Magazine/cultural/trip_cul2.html, https://www.tripmagazine.eu/TRIP_Magazine/cultural/trip_cul3.html"),
+            Destination(4, "BLOG TRIP Magazine", "Nuestro Blog.", "BLOG TRIP Magazine - Linkedin TRIP - U2 TRIP Magazine", "https://tripmagazine.blogspot.com, https://es.linkedin.com/in/trip-magazine-668ba232, https://www.youtube.com/user/TRIPMagazine2011")
         )
 
         for (destination in destinations) {
@@ -45,6 +47,7 @@ class DBHandler(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, nul
             values.put(KEY_ID, destination.id)
             values.put(KEY_NAME, destination.name)
             values.put(KEY_DESCRIPTION, destination.description)
+            values.put(KEY_TITLES, destination.titles)
             values.put(KEY_URL, destination.url)
             db?.insert(TABLE_DESTINATIONS, null, values)
         }
@@ -62,6 +65,7 @@ class DBHandler(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, nul
                     cursor.getInt(cursor.getColumnIndexOrThrow(KEY_ID)),
                     cursor.getString(cursor.getColumnIndexOrThrow(KEY_NAME)),
                     cursor.getString(cursor.getColumnIndexOrThrow(KEY_DESCRIPTION)),
+                    cursor.getString(cursor.getColumnIndexOrThrow(KEY_TITLES)),
                     cursor.getString(cursor.getColumnIndexOrThrow(KEY_URL))
                 )
                 destinationList.add(destination)

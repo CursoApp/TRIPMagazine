@@ -4,20 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F68E04"
+    android:background="@drawable/fdotrip"
     tools:context=".activity.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginEnd="30sp"
+        android:layout_marginBottom="30sp"
         android:text="TRIP Magazine, la primera revista de turismo online ..."
-        android:textStyle="bold"
         android:textColor="#403274"
         android:textSize="25sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="30sp"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -28,15 +31,38 @@
         android:backgroundTint="#DFD36C"
         android:text="Destinos TRIP Magazine"
         android:textColor="#975C63"
-        android:textSize="25sp" />
+        android:textSize="25sp"/>
 
-    <ImageView
-        android:layout_width="140dp"
-        android:layout_height="141dp"
-        android:layout_centerHorizontal="true"
+    <Button
+        android:id="@+id/showDialogButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mostrar Diálogo"
+        android:layout_marginEnd="10sp"
+        android:layout_marginStart="230sp"
+        android:layout_marginTop="730dp"
+        android:backgroundTint="#F6EED8"
+        android:textColor="@color/blue"
+        android:textStyle="italic"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="160dp"
+        android:layout_height="161dp"
         android:layout_marginTop="500dp"
         android:layout_marginBottom="50dp"
-        android:background="@drawable/ic_launcher_trip"/>
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="90dp">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="121dp"
+            android:background="@drawable/ic_launcher_trip"
+            android:layout_margin="20sp"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+
 
 </RelativeLayout>
 

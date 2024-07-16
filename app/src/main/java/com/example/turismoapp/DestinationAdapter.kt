@@ -21,6 +21,7 @@ class DestinationAdapter(private var destinations: List<Destination>, private va
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val destination = destinations[position]
         holder.textView.text = destination.name
+        //holder.textView.text = destination.titles
         holder.itemView.setOnClickListener { clickListener(destination) }
     }
 

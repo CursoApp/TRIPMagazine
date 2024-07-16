@@ -2,6 +2,7 @@ package com.example.turismoapp.activity
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -32,4 +33,18 @@ class DestinationsActivity : AppCompatActivity() {
 
         recyclerView.adapter = destinationAdapter
     }
+  /* esto es para añadir dialogo --->>>>
+
+
+    val builder = AlertDialog.Builder(this)
+    builder.setTitle("DIALOGO")
+    builder.setMessage("Va a entrar en un destino turístico")
+    builder.setPositiveButton("OK") { dialog, which ->
+        // handle OK button click
+    }
+    builder.setNegativeButton("Cancel") { dialog, which ->
+        // handle Cancel button click
+    }
+    val dialog = builder.create()
+    dialog.show()*/
 }
