@@ -8,6 +8,7 @@
     tools:context=".activity.MainActivity">
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30sp"
@@ -30,8 +31,10 @@
         android:layout_centerInParent="true"
         android:backgroundTint="#DFD36C"
         android:text="Destinos TRIP Magazine"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="500dp"
         android:textColor="#975C63"
-        android:textSize="25sp"/>
+        android:textSize="25sp" />
 
     <Button
         android:id="@+id/showDialogButton"
@@ -45,24 +48,23 @@
         android:textColor="@color/blue"
         android:textStyle="italic"/>
 
+
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="160dp"
         android:layout_height="161dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="500dp"
         android:layout_marginBottom="50dp"
-        android:layout_centerHorizontal="true"
         app:cardCornerRadius="90dp">
 
         <ImageView
             android:layout_width="120dp"
             android:layout_height="121dp"
-            android:background="@drawable/ic_launcher_trip"
-            android:layout_margin="20sp"/>
-
+            android:layout_margin="20sp"
+            android:background="@drawable/ic_launcher_trip" />
 
     </androidx.cardview.widget.CardView>
-
-
 
 </RelativeLayout>
 

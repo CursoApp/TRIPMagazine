@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 import android.content.Intent
+import android.text.Html
 import android.widget.Button
 import com.example.turismoapp.R
 
@@ -39,12 +40,16 @@ class MainActivity : AppCompatActivity() {
             showDialog()
         }
     }
-
+        // Cuadro del dialogo
         private fun showDialog() {
             val builder = AlertDialog.Builder(this)
-            builder.setTitle("Dialogo amistoso")
-            builder.setMessage("¿Deseas continuar?")
-            builder.setPositiveButton("Sí") { dialog, which ->
+            builder.setTitle(Html.fromHtml("<font color='##403274'> Dialogo con TRIP Magazine  </font>"))
+            builder.setMessage(
+                Html.fromHtml(" <b> TRIP Magazine</b>, es la primera revista de turismo on-line de participación global.\n" +
+                    "<br><br><hr>" + "<b>TRIP Magazine </b>Le ofrece visitar destinos de siempre con una mirada distinta, con una mirada de <b>TRIP Magazine</b>.\n" +
+                    "<br><hr>"))
+            //("¿Deseas continuar?")
+            builder.setPositiveButton(Html.fromHtml("Sí")) { dialog, which ->
                 // Acción cuando el usuario hace clic en "Sí"
             }
             builder.setNegativeButton("No") { dialog, which ->
